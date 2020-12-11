@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="5.css">
+        <script src="5.js"></script>
+    </head>
+    <body>
+        <main>
+            <div id="display">
+                <label>
+                    <input type="text" id="display_result" placeholder="0" disabled>
+                </label>
+            </div>
+            <div id="numpad">
+                <div class="line">
+                    <button id="erase" class="big_button" onclick="reset()"><h1>C</h1></button>
+                    <button class="button" onclick="divide()"><h1>/</h1></button>
+                </div>
+                <div class="line">
+                    <button class="button" onclick="seven()" value="7"><h1>7</h1></button>
+                    <button class="button" onclick="eight()" value="8"><h1>8</h1></button>
+                    <button class="button" onclick="nine()" value="9"><h1>9</h1></button>
+                    <button class="button" onclick="mult()"><h1>x</h1></button>
+                </div>
+                <div class="line">
+                    <button class="button" onclick="four()" value="4"><h1>4</h1></button>
+                    <button class="button" onclick="five()" value="5"><h1>5</h1></button>
+                    <button class="button" onclick="six()" value="6"><h1>6</h1></button>
+                    <button class="button" onclick="minus()"><h1>-</h1></button>
+                </div>
+                <div class="line">
+                    <button class="button" onclick="one()" value="1"><h1>1</h1></button>
+                    <button class="button" onclick="two()" value="2"><h1>2</h1></button>
+                    <button class="button" onclick="three()" value="3"><h1>3</h1></button>
+                    <button class="button" onclick="plus()"><h1>+</h1></button>
+                </div>
+                <div class="line">
+                     <button id="zero" class="big_button" onclick="zero()" value="0"><h1>0</h1></button>
+                    <button id="equals" class="button" onclick="result()"><h1>=</h1></button>
+                </div>
+            </div>
+        </main>
+    </body>
+</html>

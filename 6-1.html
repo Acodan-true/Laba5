@@ -1,0 +1,47 @@
+<!DOCTYPE HTML>
+<html>
+<head> 
+<style>
+    body
+    {
+        height: 2200px;    
+    }
+    #scrollToTop 
+    {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        font-weight: bold;
+        cursor: pointer;
+        opacity: 0;
+        transition: all 0.5s ease-in;
+    } 
+    
+    
+    </style>
+</head>
+    
+<body>
+    <div id="scrollToTop" onclick="goUp();"> <img src="str.png" alt="ВВЕРХ"> </div> 
+    <script>
+           window.onscroll = function() 
+           {
+               var scrollElem = document.getElementById("scrollToTop");
+               if (window.pageYOffset > document.documentElement.clientHeight) 
+               {
+                  scrollElem.style.opacity = "1";
+               } 
+               else 
+               {
+                   scrollElem.style.opacity = "0";
+               }
+           } 
+           var timeOut;
+           function goUp() 
+           {
+                window.scrollTo(pageXOffset,0);
+           } 
+    </script>
+</body>
+
+</html>

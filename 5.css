@@ -1,0 +1,72 @@
+body{
+    background-color: lightgray;
+    font-family: Arial;
+    color: white;
+}
+main{
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    width: 20%;
+    height: 100%;
+}
+#display{
+    color: black;
+    border: solid black 3px;
+    width: 100%;
+    height: 10%;
+}
+#display_result
+{
+    background-color: lightgray;
+    outline: 0;
+    outline-offset: 0;
+    text-align: right;
+    width: 98%;
+    margin: 0;
+    font-size: 70px;
+}
+#display h1{
+    
+}
+#numpad{
+    border: solid black 3px;
+    width: 100%;
+    height: 90%;
+}
+.line{
+    display: flex;
+    flex-direction: row;
+    margin: auto;
+    width: 100%;
+    text-align: center;
+}
+.line h1
+{
+    color: white;
+}
+.button{
+    width: 20%;
+    border-radius: 10px;
+    background-color: white;
+    margin: 3%;
+    background-color: gray;
+}
+.big_button{
+    width: 74%;
+    border-radius: 10px;
+    background-color: white;
+    margin: 3%;
+    background-color: gray;
+}
+#erase{
+    background-color: dodgerblue;
+}
+#equals{
+    background-color: forestgreen;
+}
+
+.button:active, #equals:active, #erase:active, .big_button:active{
+    background-color: aliceblue;
+    color: black;
+}

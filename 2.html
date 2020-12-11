@@ -1,0 +1,22 @@
+<!DOCTYPE HTML>
+<html>
+
+<body>
+    <form>
+        <input type = "text" id="numb"  size="40"  placeholder="Что-то">
+        <input type="button" id="addButton"  value="Тык" onClick="copypast()">
+    </form>
+
+    <script>
+        
+        function copypast()
+        {
+            document.getElementById('numb').value = Math.round(Math.random() * (10 - 1) + 1);
+        }
+     
+    </script>
+
+  
+</body>
+
+</html>

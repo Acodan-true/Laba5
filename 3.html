@@ -1,0 +1,32 @@
+<!DOCTYPE HTML>
+<html>
+
+<body>
+    <form>
+        <input type = "text" id="text1"  size="40"  placeholder="Это первое поле">
+        <input type = "text" id="text2"  size="40"  placeholder="Это второе поле">
+        <input type="button" id="addButton"  value="Скопировать" onClick="copypast()">
+        <input type="button" id="addButton"  value="Стереть" onClick="erase()">
+    </form>
+
+    <script>
+        
+        function copypast()
+        {
+            if (document.getElementById('text1').value == "")
+                alert("Сначала введите что-то в первое поле!");
+            else 
+                document.getElementById('text2').value = document.getElementById('text1').value;
+        }
+        function erase()
+        {
+            document.getElementById('text1').value = '';
+            document.getElementById('text2').value = '';
+        }
+     
+    </script>
+
+  
+</body>
+
+</html>

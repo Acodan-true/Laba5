@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+</head>
+<body>
+    
+    <label>
+        <input type="text" id="rows" value="2" style="font-family: Verdana; font-size: 12px; margin-left: 15px; width: 50px;" onkeyup="var yratext=/['A-я','\s']/; if(yratext.test(this.value)) this.value=''" min="0">Количество строк (rows)
+    </label>
+    <label>
+        <input type="text" id="columns" value="3" style="font-family: Verdana; font-size: 12px; margin-left: 15px; width: 50px;" onkeyup="var yratext=/['A-я','\s']/; if(yratext.test(this.value)) this.value=''" min="0">Количество столбцов (columns)
+    </label>
+    <p><label>
+        <input type="checkbox" id="checkbox" value="Рамка" style="margin-left: 15px">Рамка
+    </label></p>
+    <button id="create" onclick="addTable();" style="background-color: lime; margin: 5px 15px">Create table</button>
+    
+    <table id="table1"></table>
+
+    <script>
+
+        function addTable() 
+        {
+            var body = document.querySelector("body"),
+                numRows = document.getElementById("rows"),
+                numColumns = document.getElementById("columns"),
+                rows = numRows.value,
+                columns = numColumns.value,
+                tr = "",
+                td = "",
+                firstTable = document.querySelector("table");
+            console.log(rows);
+            console.log(columns);
+            if (rows>0 && columns>0)
+            {
+                table = document.createElement("table"),
+                checkbox = document.getElementById("checkbox");
+                if (checkbox.checked == true) 
+                {
+                    table.setAttribute("border", "2px");
+                } 
+                else 
+                {
+                    table.setAttribute("border", "0");
+                }
+                for (var i = 0; i < rows; i++) 
+                {
+                    tr = document.createElement("tr");
+                    for (var j = 0; j < columns; j++) 
+                    {
+                        td = document.createElement("td");
+                        text = document.createTextNode(Math.round(Math.random() * 10));
+                        td.appendChild(text);
+                        tr.appendChild(td);
+                    }
+                    table.appendChild(tr);
+                }
+                console.log(tr);
+                console.log(td);
+                if (firstTable == null) 
+                {
+                    return body.appendChild(table);
+                } 
+                else 
+                {
+                    var newTable = body.appendChild(table);
+                    return document.body.replaceChild(newTable, firstTable);
+                }
+            }
+            else 
+            {
+                alert('Введите целые положительные числа!');
+            }
+            
+        }
+
+        
+</script>
+</body>
+</html>
